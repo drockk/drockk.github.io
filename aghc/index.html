@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset = 'utf-8'>
+        <meta content = 'DailySentence, daily sentence for you' name = 'description'>
+        <meta contnet = 'Bartosz Zielonka' name = 'author'>
+
+        <title>Za ilę będziesz na AGH?</title>
+
+        <link href = 'css/webslides.css' rel = 'stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=latin-ext" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Amiko&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <style>
+               body 
+               {
+                    font-family: 'Amiko', sans-serif;
+               }
+        </style>
+    </head>
+    <body>
+        <article id='webslides'>
+            <section class='bg-apple aligncenter'>
+                <div class="wrap">
+                    <p>Za tyle będziesz na AGH....</p>
+                    <h1 class = 'h1.fadeIn.slow' id="ti">
+                    </h1>
+                    <h2>Kraków będzie czekał</h2>
+                </div>
+            </section>
+        </article>
+        <script src="js/webslides.js"></script>
+        <script>
+            window.ws = new WebSlides();
+
+            var countDownDate = new Date("OCT 1, 2020 00:00:00").getTime();
+
+            function countdown() 
+            {
+
+                var now = new Date().getTime();
+    
+                var distance = countDownDate - now;
+    
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                document.getElementById("ti").innerHTML = days + "dni " + hours + "godzin " + minutes + "minut " + seconds + "sekund ";
+    
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("ti").innerHTML = "Witamy na AGH :P";
+                }
+            }
+            setInterval("countdown()", 1000);
+        </script>
+    </body>
+</html>
