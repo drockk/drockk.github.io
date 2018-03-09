@@ -15,7 +15,7 @@
     <body>
         <article id='webslides'>
             <section class='bg-apple aligncenter'>
-                <div class="wrap">
+                <div class="wrap"  style="font-family: Arial;">
                     <p>Za tyle będziesz na AGH....</p>
                     <h1 class = 'h1.fadeIn.slow' id="ti">
                     </h1>
@@ -26,12 +26,9 @@
         <script src="js/webslides.js"></script>
         <script>
             window.ws = new WebSlides();
-
             var countDownDate = new Date("OCT 1, 2020 00:00:00").getTime();
-
             function countdown() 
             {
-
                 var now = new Date().getTime();
     
                 var distance = countDownDate - now;
